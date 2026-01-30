@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Industriales Claros | EPP Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-info">
+                    <span><i class="icon-phone"></i> +57 300 000 0000</span>
+                    <span><i class="icon-mail"></i> ventas@sic-industriales.com</span>
+                </div>
+                <div class="top-bar-social">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="image-removebg-preview.png" alt="Servicios Industriales Claros" id="main-logo">
+                </div>
+                <div class="header-search">
+                    <input type="text" placeholder="Buscar equipos, calzado, protección...">
+                    <button><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg></button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#empresa">Corporativo</a></li>
+                        <li><a href="shop.html">Tienda</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-icon" onclick="window.location.href='checkout.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1" />
+                        <circle cx="20" cy="21" r="1" />
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header shop-banner">
+            <div class="container">
+                <h1>Tienda</h1>
+                <p>Equipos profesionales de alta resistencia.</p>
+            </div>
+        </section>
+
+        <section id="productos" class="products">
+            <div class="container shop-layout">
+                <aside class="shop-sidebar-new">
+                    <div class="filter-group">
+                        <label for="cat-select">Categorías</label>
+                        <select id="cat-select" class="filter-select">
+                            <option value="all">Seleccionar</option>
+                            <option value="cascos">Protección de Cabeza</option>
+                            <option value="calzado">Calzado de Seguridad</option>
+                            <option value="ropa">Ropa Industrial</option>
+                            <option value="accesorios">Accesorios</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="color-select">Color</label>
+                        <select id="color-select" class="filter-select">
+                            <option value="all">Seleccionar</option>
+                            <option value="blue">Azul</option>
+                            <option value="orange">Naranja</option>
+                            <option value="black">Negro</option>
+                            <option value="white">Blanco</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sort-select">Ordenar por</label>
+                        <select id="sort-select" class="filter-select">
+                            <option value="default">Ordenar por</option>
+                            <option value="price-asc">Precio: Menor a Mayor</option>
+                            <option value="price-desc">Precio: Mayor a Menor</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <div class="shop-main">
+                    <div class="product-grid" id="product-grid">
+                        <!-- Products will be injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/573000000000" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.478 2.01 7.79l-2.01 7.21 7.375-1.933c2.215 1.18 4.743 1.85 7.425 1.85 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.167c-2.433 0-4.717-0.647-6.697-1.777l-0.48-0.273-4.383 1.15 1.17-4.19-0.3-0.477c-1.257-2.010-1.983-4.38-1.983-6.933 0-7.257 5.91-13.167 13.167-13.167s13.167 5.91 13.167 13.167-5.91 13.167-13.167 13.167zM22.513 18.23c-0.357-0.18-2.113-1.043-2.44-1.163-0.327-0.117-0.567-0.18-0.803 0.18-0.237 0.357-0.917 1.163-1.127 1.4s-0.417 0.267-0.773 0.087c-0.357-0.18-1.503-0.553-2.863-1.77-1.060-0.947-1.777-2.113-1.983-2.47s-0.023-0.55 0.157-0.727c0.163-0.16 0.357-0.417 0.537-0.627 0.18-0.21 0.237-0.357 0.357-0.593 0.12-0.237 0.06-0.447-0.03-0.627s-0.803-1.947-1.103-2.673c-0.293-0.707-0.59-0.613-0.803-0.623-0.21-0.010-0.447-0.013-0.687-0.013s-0.623 0.090-0.947 0.447c-0.327 0.357-1.247 1.22-1.247 2.977s1.28 3.457 1.457 3.693c0.18 0.237 2.517 3.843 6.097 5.39 0.853 0.367 1.52 0.587 2.043 0.753 0.857 0.273 1.637 0.233 2.253 0.143 0.687-0.103 2.113-0.863 2.413-1.697 0.3-0.833 0.3-1.547 0.21-1.697s-0.327-0.237-0.687-0.417z"
+                    fill="#fff" />
+            </svg>
+        </a>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="image-removebg-preview.png" alt="SIC Logo" class="footer-logo">
+                    <p>Servicios Industriales Claros: Protegiendo el capital más valioso de su empresa — su gente.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#empresa">Quiénes Somos</a></li>
+                        <li><a href="shop.html">Tienda</a></li>
+                        <li><a href="#contacto">Contacto Directo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Datos de Contacto</h4>
+                    <p>📍 Av. Principal Industrial #123</p>
+                    <p>📞 +57 300 000 0000</p>
+                    <p>✉️ ventas@sic-industriales.com</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; 2024 Servicios Industriales Claros. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

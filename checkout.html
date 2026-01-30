@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Industriales Claros | EPP Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-info">
+                    <span><i class="icon-phone"></i> +57 300 000 0000</span>
+                    <span><i class="icon-mail"></i> ventas@sic-industriales.com</span>
+                </div>
+                <div class="top-bar-social">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="image-removebg-preview.png" alt="Servicios Industriales Claros" id="main-logo">
+                </div>
+                <div class="header-search">
+                    <input type="text" placeholder="Buscar equipos, calzado, protección...">
+                    <button><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg></button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#empresa">Corporativo</a></li>
+                        <li><a href="shop.html">Tienda</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-icon" onclick="window.location.href='checkout.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1" />
+                        <circle cx="20" cy="21" r="1" />
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Tu Carrito de Compras</h1>
+                <p>Estás a un paso de asegurar a tu equipo.</p>
+            </div>
+        </section>
+
+        <section class="checkout-page">
+            <div class="container">
+                <div class="checkout-main-grid">
+                    <div class="cart-details">
+                        <div class="card">
+                            <h3>Resumen de Productos</h3>
+                            <div id="checkout-cart-list" class="checkout-list">
+                                <!-- Cart items injected here -->
+                            </div>
+                            <div class="cart-total-bar">
+                                <span>Total a Pagar:</span>
+                                <span id="checkout-total-val" class="total-amount">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-details">
+                        <div class="card">
+                            <h3>Información de Pago</h3>
+                            <form id="final-payment-form">
+                                <div class="payment-methods">
+                                    <div class="method-option active" data-method="card">
+                                        <input type="radio" name="pay-method" value="card" checked id="pay-card">
+                                        <label for="pay-card">
+                                            <span class="icon">💳</span>
+                                            <span>Tarjeta</span>
+                                        </label>
+                                    </div>
+                                    <div class="method-option" data-method="paypal">
+                                        <input type="radio" name="pay-method" value="paypal" id="pay-paypal">
+                                        <label for="pay-paypal">
+                                            <span class="icon">🅿️</span>
+                                            <span>PayPal</span>
+                                        </label>
+                                    </div>
+                                    <div class="method-option" data-method="transfer">
+                                        <input type="radio" name="pay-method" value="transfer" id="pay-transfer">
+                                        <label for="pay-transfer">
+                                            <span class="icon">🏦</span>
+                                            <span>Transferencia</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="method-card" class="form-section method-content active">
+                                    <h4>Tarjeta de Crédito / Débito</h4>
+                                    <div class="form-group">
+                                        <label>Nombre en la Tarjeta</label>
+                                        <input type="text" placeholder="Ej. Juan Pérez">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Número de Tarjeta</label>
+                                        <input type="text" placeholder="0000 0000 0000 0000">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Vencimiento</label>
+                                            <input type="text" placeholder="MM/YY">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>CVC / CVV</label>
+                                            <input type="password" placeholder="***">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="method-paypal" class="form-section method-content">
+                                    <h4>PayPal</h4>
+                                    <p class="method-desc">Serás redirigido a PayPal para completar tu compra de forma
+                                        segura.</p>
+                                    <div class="btns-center">
+                                        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg"
+                                            height="40" alt="PayPal">
+                                    </div>
+                                </div>
+
+                                <div id="method-transfer" class="form-section method-content">
+                                    <h4>Transferencia Bancaria</h4>
+                                    <p class="method-desc">Realiza tu transferencia a la siguiente cuenta y adjunta el
+                                        comprobante.</p>
+                                    <div class="bank-details">
+                                        <p><strong>Banco:</strong> Bancolombia</p>
+                                        <p><strong>Cuenta:</strong> Ahorros 123-456789-01</p>
+                                        <p><strong>Titular:</strong> SIC Industriales SAS</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h4>Dirección de Despacho</h4>
+                                    <div class="form-group">
+                                        <label>Dirección Completa</label>
+                                        <input type="text" placeholder="Calle, Barrio, Número" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Ciudad</label>
+                                            <input type="text" placeholder="Bogotá, Medellín..." required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Código Postal</label>
+                                            <input type="text" placeholder="Opcional">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block btn-large">Finalizar Compra
+                                    Segura</button>
+                                <p class="payment-note">🔒 Pago procesado de forma segura con cifrado SSL de 256 bits.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="image-removebg-preview.png" alt="SIC Logo" class="footer-logo">
+                    <p>Servicios Industriales Claros: Protegiendo el capital más valioso de su empresa — su gente.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#empresa">Quiénes Somos</a></li>
+                        <li><a href="shop.html">Tienda</a></li>
+                        <li><a href="index.html#contacto">Contacto Directo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Datos de Contacto</h4>
+                    <p>📍 Av. Principal Industrial #123</p>
+                    <p>📞 +57 300 000 0000</p>
+                    <p>✉️ ventas@sic-industriales.com</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; 2024 Servicios Industriales Claros. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
